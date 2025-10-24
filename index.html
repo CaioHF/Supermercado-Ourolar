@@ -10,14 +10,36 @@
 </head>
 <body>
     <header>
-        <img src="imagens/Logo_mercado-removebg-preview.png" alt="" srcset="">
+        <div class="menu-icon" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <img src="imagens/Logo_mercado-removebg-preview.png" alt="Logo Supermercado Ourolar">
 
         <div class="container_input">
-            <input type="text" placeholder="O que você está procurando?" >
+            <input type="text" placeholder="O que você está procurando?">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            
         </div>
     </header>
-    
+
+    <nav class="menu-lateral" id="menu-lateral">
+        <ul>
+            <li><i class="fa-solid fa-drumstick-bite"></i> Açougue</li>
+            <li><i class="fa-solid fa-tags"></i> Ofertas</li>
+            <li><i class="fa-solid fa-apple-whole"></i> Hortifrúti</li>
+            <li><i class="fa-solid fa-seedling"></i> Flores</li>
+            <li><i class="fa-solid fa-wheat-awn"></i> Cereais</li>
+            <li><i class="fa-solid fa-soap"></i> Limpeza</li>
+        </ul>
+    </nav>
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu-lateral");
+
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("ativo");
+        });
+    </script>
 </body>
 </html>
