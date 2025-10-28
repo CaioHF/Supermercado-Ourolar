@@ -58,7 +58,7 @@ header {
 }
 
 input[type="text"] {
-    width: 350px;
+    width: 70vw;
     height: 45px;
 
     border: none;
