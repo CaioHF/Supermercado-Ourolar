@@ -22,55 +22,61 @@ html, body {
 }
 body {
     background-color: var(--cor-4);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     height: 100%;
 }
 
 /* ===== CABEÇALHO ===== */
 header {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    gap: 13px;
-    width: 100vw;
-    height: 10vh;
-    padding: 0 20px;
-    background: linear-gradient(to right, var(--cor-5), var(--cor-6), var(--cor-7), var(--cor-8), var(--cor-9));
-    color: white;
-}
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: 10%;
+    gap: 10px;
 
-header img {
-    object-fit: cover;
+    background: linear-gradient(to right, var(--cor-5), var(--cor-6), var(--cor-7), var(--cor-8), var(--cor-9));
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100; /* acima do menu */
 }
 
 .menu-icon {
     font-size: 1.8em;
     cursor: pointer;
     color: white;
+
 }
 
 .container_input {
     display: flex;
-    align-items: center;
-    margin-left: 30px;
+    width: 500px;
+    gap: 5px;
 }
 
 input[type="text"] {
-    width: 65vw;
+    width: 350px;
     height: 45px;
+
     border: none;
-    border-radius: 4px 0 0 4px;
-    padding-left: 10px;
+    border-radius: 4px 0px 0px 4px;
+    padding-left: 10px; /*Espaco na escrita(placeholder)*/
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus { /*Tira o destaque ao apertar no input*/
     outline: none;
 }
 
 button {
     width: 50px;
-    height: 45px;
+    height: 46px;
+
+    border-radius: 0px 4px 4px 0px;
     border: none;
+
     background-color: var(--cor-7);
     color: white;
     border-radius: 0 4px 4px 0;
@@ -86,6 +92,7 @@ button:hover {
     color: white;
 }
 
+/* ===== FIM CABECALHO ===== */
 
 .menu-lateral {
    position: fixed;
@@ -129,11 +136,13 @@ button:hover {
 }
 
 main {
-    height: 90vh;
-    width: 100vw;
+    height: 90%;
+    width: 100%;
     background-color: red;
     transition: transform 0.3s ease;
+    margin-top: 10vh; /* empurra conteúdo pra baixo do header */
 }
+
 
 .menu-lateral.ativo ~ main {
     transform: translateX(160px);
@@ -142,13 +151,17 @@ main {
 /* ===== PRODUTOS ===== */
 .produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     padding: 20px;
     background-color: var(--cor-4);
+    transition: grid-template-columns 0.3s ease;
 }
 
 .produto {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -197,17 +210,24 @@ main {
 }
 
 
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
+    .menu-lateral.ativo ~ main .produtos {
+        width: 310px;
+        grid-template-columns: 1fr; 
+    }
+
+    .menu-lateral:not(.ativo) ~ main .produtos {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
     header img {
         display: none;
     }
-}
-
-@media screen and (min-width: 800px) {
+*/
+/*@media screen and (min-width: 800px) {
     main {
         transform: translateX(160px);
     }
-
 
     .menu-lateral {
         left: 0;
@@ -221,4 +241,4 @@ main {
     header img {
         width: 100px;
     }
-}
+*/
