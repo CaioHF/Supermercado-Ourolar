@@ -94,18 +94,21 @@ button:hover {
 
 /* ===== FIM CABECALHO ===== */
 
+
+/* ===== CONTEUDO PRINCIPAL ===== */
 .menu-lateral {
    position: fixed;
     top: 10vh;
     left: -160px;
     width: 160px;
     height: 90vh;
+
     background: var(--cor-8);
     color: white;
     box-shadow: 2px 0 8px rgba(0,0,0,0.2);
     transition: left 0.3s ease;
     z-index: 10;
-    padding-top: 20px;
+    
     overflow-y: auto; 
     scrollbar-width: thin;
     scrollbar-color: var(--cor-6) var(--cor-8);
@@ -121,48 +124,42 @@ button:hover {
 }
 
 .menu-lateral li {
-    padding: 15px 20px;
+    padding: 10px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
     font-size: 1.1em;
     transition: background 0.3s;
 }
 
 .menu-lateral li:hover {
     background-color: var(--cor-6);
-    font-size: 1.5em;
 }
 
 main {
     height: 90%;
     width: 100%;
-    background-color: red;
     transition: transform 0.3s ease;
-    margin-top: 10vh; /* empurra conteúdo pra baixo do header */
+    margin-top: 8vh; /* empurra conteúdo pra baixo do header */
 }
-
 
 .menu-lateral.ativo ~ main {
     transform: translateX(160px);
 }
+/* ===== FIM CONTEUDO PRINCIPAL ===== */
 
 /* ===== PRODUTOS ===== */
-.produtos {
+section.produtos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding: 20px;
-    background-color: var(--cor-4);
+    background-color: var(--cor-6);
     transition: grid-template-columns 0.3s ease;
 }
 
 .produto {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--cor-2);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     text-align: center;
@@ -184,32 +181,44 @@ main {
 
 .produto h2 {
     font-size: 1em;
-    color: var(--cor-8);
+    color: var(--cor-9);
     margin: 8px 0 4px 0;
 }
 
 .produto .preco {
     font-size: 1.1em;
     font-weight: bold;
-    color: green;
+    color: var(--cor-7);
 }
 
-.produto button {
-    background-color: var(--cor-7);
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 8px;
-    transition: background-color 0.2s ease;
+@media screen and (max-width: 900px) {
+    .menu-lateral.ativo ~ main section.produtos {
+        grid-template-columns: 1fr;
+        width: calc(100% - 160px); /* subtrai a largura do menu lateral */
+        transition: width 0.3s ease;
+
+    }
+
+    .menu-lateral:not(.ativo) ~ main section.produtos {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        transition: width 0.3s ease;
+    }
 }
 
-.produto button:hover {
-    background-color: var(--cor-6);
+@media screen and (min-width: 900px){
+    .menu-lateral.ativo ~ main section.produtos {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: calc(100% - 160px); /* subtrai a largura do menu lateral */
+        transition: width 0.3s ease;
+    }
+
+    .menu-lateral:not(.ativo) ~ main section.produtos {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        transition: width 0.3s ease;
+    }
 }
-
-
 /*@media screen and (max-width: 800px) {
     .menu-lateral.ativo ~ main .produtos {
         width: 310px;
