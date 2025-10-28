@@ -53,12 +53,12 @@ header {
 
 .container_input {
     display: flex;
-    width: 500px;
+    width: 100%;
     gap: 5px;
 }
 
 input[type="text"] {
-    width: 70vw;
+    width: 85%;
     height: 45px;
 
     border: none;
@@ -71,7 +71,7 @@ input[type="text"]:focus { /*Tira o destaque ao apertar no input*/
 }
 
 button {
-    width: 50px;
+    width: 40px;
     height: 46px;
 
     border-radius: 0px 4px 4px 0px;
