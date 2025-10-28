@@ -24,8 +24,9 @@
 
     <nav class="menu-lateral" id="menu-lateral">
         <ul>
-            <li><i class="fa-solid fa-drumstick-bite"></i> Açougue</li>
             <li><i class="fa-solid fa-tags"></i> Ofertas</li>
+            <li><i class="fa-solid fa-drumstick-bite"></i> Açougue</li>
+            
             <li><i class="fa-solid fa-apple-whole"></i> Hortifrúti</li>
             <li><i class="fa-solid fa-seedling"></i> Flores</li>
             <li><i class="fa-solid fa-wheat-awn"></i> Cereais</li>
@@ -48,13 +49,30 @@
             <li><i class="fa-solid fa-basket-shopping"></i> Outros</li>
         </ul>
     </nav>
-    <script>
-        const toggle = document.getElementById("menu-toggle");
-        const menu = document.getElementById("menu-lateral");
+    
+    <main>
+        <section class="produtos">
+        <div class="produto">
+            <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/arroz-branco-camil-t1-1kg-768x768.jpg" alt="Arroz 5kg">
+            <h2>Arroz Tipo 1 5kg</h2>
+            <p class="preco">R$ 23,90</p>
+        </div>
 
-        toggle.addEventListener("click", () => {
-            menu.classList.toggle("ativo");
-        });
-    </script>
+        <div class="produto">
+            <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+            <h2>Feijão Carioca 1kg</h2>
+            <p class="preco">R$ 8,99</p>
+        </div>
+
+        <div class="produto">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+            <h2>Leite Integral 1L</h2>
+            <p class="preco">R$ 4,79</p>
+        </div>
+
+        <!-- Você pode duplicar mais blocos .produto -->
+    </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
