@@ -57,6 +57,11 @@ header {
     gap: 5px;
 }
 
+.inputEbt{
+        display: flex;
+        width: 95%;
+}
+
 input[type="text"] {
     width: 85%;
     height: 45px;
@@ -90,6 +95,10 @@ button:hover {
 .fa-solid.fa-magnifying-glass{ /*icone da lupa*/
     font-size: 1.2em;
     color: white;
+}
+
+div.endereco{
+    display: none;
 }
 
 /* ===== FIM CABECALHO ===== */
@@ -145,8 +154,6 @@ button:hover {
     color: var(--cor-9);
     background: #f9f9f9;
 }
-
-
 
 main {
     height: 90%;
@@ -205,36 +212,80 @@ section.produtos {
     color: var(--cor-7);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) { /*Telas pequenas*/
     .menu-lateral.ativo ~ main section.produtos {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         width: calc(100% - 160px); /* subtrai a largura do menu lateral */
         transition: width 0.3s ease;
 
     }
 
     .menu-lateral:not(.ativo) ~ main section.produtos {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         width: 100%;
         transition: width 0.3s ease;
     }
 
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 850px){ /*Telas grandes*/
+
+    div.container_input{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .inputEbt{
+        display: flex;
+        align-items: center;
+    }
+
+    .fa-solid.fa-location-dot{
+        font-size: 1.7em;
+        margin-top: 2px;
+    }
+
+    div.endereco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    align-items: center;
+    color: white;
+    gap: 3px;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+div.endereco:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    input[type="text"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
     .produto img {
         height: 200px;  /* aumenta um pouco o tamanho, mas sem exagero */
         object-fit: contain; /* mantém proporção da imagem */
     }
     
     .menu-lateral.ativo ~ main section.produtos {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         width: calc(100% - 160px); /* subtrai a largura do menu lateral */
         transition: width 0.3s ease;
     }
 
     .menu-lateral:not(.ativo) ~ main section.produtos {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         width: 100%;
         transition: width 0.3s ease;
     }
