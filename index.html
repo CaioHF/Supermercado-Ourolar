@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super mercado Ourolar</title>
+    <title>Supermercado Ourolar</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a13ae5a66e.js" crossorigin="anonymous"></script>
@@ -22,98 +22,279 @@
 
     <nav class="menu-lateral" id="menu-lateral">
         <ul>
-            <li><i class="fa-solid fa-tags"></i> Ofertas</li>
-            <li><i class="fa-solid fa-drumstick-bite"></i> Açougue</li>
-            
-            <li><i class="fa-solid fa-apple-whole"></i> Hortifrúti</li>
-            <li><i class="fa-solid fa-seedling"></i> Flores</li>
-            <li><i class="fa-solid fa-wheat-awn"></i> Cereais</li>
-            <li><i class="fa-solid fa-soap"></i> Limpeza</li>
-            <li><i class="fa-solid fa-spray-can-sparkles"></i> Perfumaria</li>
-            <li><i class="fa-solid fa-bowl-rice"></i> Massas</li>
-            <li><i class="fa-solid fa-cheese"></i> Frios</li>
-            <li><i class="fa-solid fa-pepper-hot"></i> Temperos</li>
-            <li><i class="fa-solid fa-snowflake"></i> Congelados</li>
-            <li><i class="fa-solid fa-wine-bottle"></i> Bebidas</li>
-            <li><i class="fa-solid fa-cookie-bite"></i> Bolachas</li>
-            <li><i class="fa-solid fa-bone"></i> Rações</li>
-            <li><i class="fa-solid fa-basket-shopping"></i> Outros</li>
-            <li><i class="fa-solid fa-basket-shopping"></i> Outros</li>
-            <li><i class="fa-solid fa-basket-shopping"></i> Outros</li>
-            <li><i class="fa-solid fa-basket-shopping"></i> Outros</li>
-            <li><i class="fa-solid fa-basket-shopping"></i> Outros</li>
-            <li><i class="fa-solid fa-basket-shopping"></i> Outros</li>
-            <li><i class="fa-solid fa-basket-shopping"></i> Outros</li>
-            <li><i class="fa-solid fa-basket-shopping"></i> Outros</li>
+            <li data-categoria="ofertas"><i class="fa-solid fa-tags"></i> Ofertas</li>
+            <li data-categoria="acougue"><i class="fa-solid fa-drumstick-bite"></i> Açougue</li>
+            <li data-categoria="hortifruti"><i class="fa-solid fa-apple-whole"></i> Hortifrúti</li>
+            <li data-categoria="flores"><i class="fa-solid fa-seedling"></i> Flores</li>
+            <li data-categoria="cereais"><i class="fa-solid fa-wheat-awn"></i> Cereais</li>
+            <li data-categoria="limpeza"><i class="fa-solid fa-soap"></i> Limpeza</li>
+            <li data-categoria="perfumaria"><i class="fa-solid fa-spray-can-sparkles"></i> Perfumaria</li>
+            <li data-categoria="massas"><i class="fa-solid fa-bowl-rice"></i> Massas</li>
+            <li data-categoria="frios"><i class="fa-solid fa-cheese"></i> Frios</li>
+            <li data-categoria="temperos"><i class="fa-solid fa-pepper-hot"></i> Temperos</li>
+            <li data-categoria="congelados"><i class="fa-solid fa-snowflake"></i> Congelados</li>
+            <li data-categoria="bebidas"><i class="fa-solid fa-wine-bottle"></i> Bebidas</li>
+            <li data-categoria="bolachas"><i class="fa-solid fa-cookie-bite"></i> Bolachas</li>
+            <li data-categoria="racoes"><i class="fa-solid fa-bone"></i> Rações</li>
         </ul>
     </nav>
     
     <main>
         <section class="produtos">
-        <div class="produto">
-            <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/arroz-branco-camil-t1-1kg-768x768.jpg" alt="Arroz 5kg">
-            <h2>Arroz Tipo 1 5kg</h2>
-            <p class="preco">R$ 23,90</p>
-        </div>
 
-        <div class="produto">
-            <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
-            <h2>Feijão Carioca 1kg</h2>
-            <p class="preco">R$ 8,99</p>
-        </div>
+             <!--Produtos do Acougue-->
 
-        <div class="produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
-            <h2>Leite Integral 1L</h2>
-            <p class="preco">R$ 4,79</p>
-        </div>
+            <div class="produto" data-categoria="cereais">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/arroz-branco-camil-t1-1kg-768x768.jpg" alt="Arroz 5kg">
+                <h2>Arroz Tipo 1 5kg</h2>
+                <p class="preco">R$ 23,90</p>
+            </div>
 
-        <div class="produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
-            <h2>Leite Integral 1L</h2>
-            <p class="preco">R$ 4,79</p>
-        </div>
+            <div class="produto" data-categoria="cereais">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+
+            <div class="produto" data-categoria="cereais">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+             <!--Produtos do Acougue-->
+
+             <div class="produto" data-categoria="flores">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/arroz-branco-camil-t1-1kg-768x768.jpg" alt="Arroz 5kg">
+                <h2>Arroz Tipo 1 5kg</h2>
+                <p class="preco">R$ 23,90</p>
+            </div>
+
+            <div class="produto" data-categoria="flores">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+
+            <div class="produto" data-categoria="flores">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+
+            <!--Produtos do Acougue-->
+
+            <div class="produto" data-categoria="limpeza">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/arroz-branco-camil-t1-1kg-768x768.jpg" alt="Arroz 5kg">
+                <h2>Arroz Tipo 1 5kg</h2>
+                <p class="preco">R$ 23,90</p>
+            </div>
+
+            <div class="produto" data-categoria="limpeza">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+
+            <div class="produto" data-categoria="limpeza">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+
+            <div class="produto" data-categoria="perfumaria">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/arroz-branco-camil-t1-1kg-768x768.jpg" alt="Arroz 5kg">
+                <h2>Arroz Tipo 1 5kg</h2>
+                <p class="preco">R$ 23,90</p>
+            </div>
+
+            <div class="produto" data-categoria="perfumaria">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+
+            <div class="produto" data-categoria="perfumaria">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+
+            <div class="produto" data-categoria="massas">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/arroz-branco-camil-t1-1kg-768x768.jpg" alt="Arroz 5kg">
+                <h2>Arroz Tipo 1 5kg</h2>
+                <p class="preco">R$ 23,90</p>
+            </div>
+
+            <div class="produto" data-categoria="massas">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+
+            <div class="produto" data-categoria="massas">
+                <img src="https://www.camil.com.br/wp-content/uploads/sites/12/2020/06/mkp-feijao-carioca-1kg-removebg-preview.png" alt="Feijão Carioca">
+                <h2>Feijão Carioca 1kg</h2>
+                <p class="preco">R$ 8,99</p>
+            </div>
+
+            <div class="produto" data-categoria="bebidas">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="bebidas">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="bebidas">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+             <!--Produtos do Acougue-->
 
 
-        <div class="produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
-            <h2>Leite Integral 1L</h2>
-            <p class="preco">R$ 4,79</p>
-        </div>
+            <!--Produtos do Acougue-->
 
-        <div class="produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
-            <h2>Leite Integral 1L</h2>
-            <p class="preco">R$ 4,79</p>
-        </div>
+            <div class="produto" data-categoria="acougue">
+                <img src="imagens/acougue/Bisteca_bovina.png" alt="Bisteca_bovina">
+                <h2>Bisteca Bovina Kg</h2>
+                <p class="preco">R$ 37,90</p>
+            </div>
 
-        <div class="produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
-            <h2>Leite Integral 1L</h2>
-            <p class="preco">R$ 4,79</p>
-        </div>
+            <div class="produto" data-categoria="acougue">
+                <img src="imagens/acougue/coxao_mole.png" alt="coxao_mole">
+                <h2>Coxão Mole Kg</h2>
+                <p class="preco">R$ 45,90</p>
+            </div>
 
-        <div class="produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
-            <h2>Leite Integral 1L</h2>
-            <p class="preco">R$ 4,79</p>
-        </div>
+            <div class="produto" data-categoria="acougue">
+                <img src="imagens/acougue/liguica_frimesa.png" alt="liguica_frimesa">
+                <h2>Liguiça Frimesa Kg</h2>
+                <p class="preco">R$ 25,90</p>
+            </div>
 
-        <div class="produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
-            <h2>Leite Integral 1L</h2>
-            <p class="preco">R$ 4,79</p>
-        </div>
+            <!--Fim Produtos do Acougue-->
 
-        <div class="produto">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
-            <h2>Leite Integral 1L</h2>
-            <p class="preco">R$ 4,79</p>
-        </div>
+            <!--Fim Produtos do Hortifuti-->
+            <div class="produto" data-categoria="hortifruti">
+                <img src="imagens/hortifruti/maca.png" alt="Maçã">
+                <h2>Maçã kg</h2>
+                <p class="preco">R$ 6,50</p>
+            </div>
 
-        <!-- Você pode duplicar mais blocos .produto -->
-    </section>
+            <div class="produto" data-categoria="hortifruti">
+                <img src="imagens/hortifruti/banana.png" alt="Maçã">
+                <h2>Banana kg</h2>
+                <p class="preco">R$ 6,50</p>
+            </div>
+
+            <div class="produto" data-categoria="hortifruti">
+                <img src="imagens/hortifruti/laranja.png" alt="Maçã">
+                <h2>Laranja kg</h2>
+                <p class="preco">R$ 6,50</p>
+            </div>
+
+            <!--Fim Produtos do Hortifuti-->
+
+            <!-- Mais produtos -->
+
+            <div class="produto" data-categoria="frios">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="frios">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="frios">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="temperos">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="temperos">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="temperos">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="congelados">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="congelados">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="congelados">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="bolachas">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="bolachas">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="bolachas">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="racoes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="racoes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+
+            <div class="produto" data-categoria="racoes">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmwjEpGs6aC342L0mH1v0LQgnWlzozBxSF3A&s" alt="Leite Integral">
+                <h2>Leite Integral 1L</h2>
+                <p class="preco">R$ 4,79</p>
+            </div>
+        </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>

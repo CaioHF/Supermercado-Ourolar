@@ -130,6 +130,10 @@ button:hover {
     transition: background 0.3s;
 }
 
+.menu-lateral li.ativo {
+    background-color: var(--cor-6);
+}
+
 .menu-lateral li:hover {
     background-color: var(--cor-6);
 }
