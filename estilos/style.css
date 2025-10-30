@@ -221,7 +221,7 @@ section.produtos {
     }
 
     .menu-lateral:not(.ativo) ~ main section.produtos {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         width: 100%;
         transition: width 0.3s ease;
     }
