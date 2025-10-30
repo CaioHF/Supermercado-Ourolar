@@ -21,7 +21,7 @@ html, body {
     overflow-x: hidden; 
 }
 body {
-    background-color: var(--cor-4);
+    background-color: var(--cor-6);
     font-family: Helvetica, sans-serif;
     height: 100%;
 }
@@ -97,8 +97,8 @@ button:hover {
 
 /* ===== CONTEUDO PRINCIPAL ===== */
 .menu-lateral {
-   position: fixed;
-    top: 10vh;
+    position: fixed;
+    top: 62px;
     left: -160px;
     width: 160px;
     height: 90vh;
@@ -127,7 +127,7 @@ button:hover {
     border-left: 4px solid transparent;
     padding: 8px 12px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
     font-size: 1.1em;
 }
 
@@ -141,6 +141,9 @@ button:hover {
 
 .menu-lateral li:hover {
     background-color: var(--cor-6);
+    border-left: 4px solid var(--cor-9);
+    color: var(--cor-9);
+    background: #f9f9f9;
 }
 
 
@@ -215,6 +218,7 @@ section.produtos {
         width: 100%;
         transition: width 0.3s ease;
     }
+
 }
 
 @media screen and (min-width: 900px){
@@ -235,35 +239,3 @@ section.produtos {
         transition: width 0.3s ease;
     }
 }
-/*@media screen and (max-width: 800px) {
-    .menu-lateral.ativo ~ main .produtos {
-        width: 310px;
-        grid-template-columns: 1fr; 
-    }
-
-    .menu-lateral:not(.ativo) ~ main .produtos {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-    header img {
-        display: none;
-    }
-*/
-/*@media screen and (min-width: 800px) {
-    main {
-        transform: translateX(160px);
-    }
-
-    .menu-lateral {
-        left: 0;
-        width: 160px;
-    }
-
-    .menu-icon {
-        display: none; 
-    }
-
-    header img {
-        width: 100px;
-    }
-*/
