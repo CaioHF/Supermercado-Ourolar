@@ -48,7 +48,6 @@ header {
     font-size: 1.8em;
     cursor: pointer;
     color: white;
-
 }
 
 .container_input {
@@ -58,8 +57,8 @@ header {
 }
 
 .inputEbt{
-        display: flex;
-        width: 95%;
+    display: flex;
+    width: 95%;
 }
 
 input[type="text"] {
@@ -213,39 +212,58 @@ section.produtos {
 }
 
 @media screen and (max-width: 850px) { /*Telas pequenas*/
-    .menu-lateral.ativo ~ main section.produtos {
-        grid-template-columns: 1fr 1fr;
-        width: calc(100% - 160px); /* subtrai a largura do menu lateral */
-        transition: width 0.3s ease;
+.menu-lateral.ativo ~ main section.produtos {
+    grid-template-columns: 1fr;
+    width: calc(100% - 160px); /* subtrai a largura do menu lateral */
+    transition: width 0.3s ease;
+}
 
-    }
+.menu-lateral:not(.ativo) ~ main section.produtos {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    transition: width 0.3s ease;
+}
 
-    .menu-lateral:not(.ativo) ~ main section.produtos {
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        transition: width 0.3s ease;
-    }
+.Logo_Mercado {
+    display: none;
+}
 
 }
 
 @media screen and (min-width: 850px){ /*Telas grandes*/
+#menu-toggle {
+    display: none;
+}
 
-    div.container_input{
-        display: flex;
-        justify-content: space-between;
-    }
+.menu-lateral {
+    position: fixed;
+    left: 0px;
+}
 
-    .inputEbt{
-        display: flex;
-        align-items: center;
-    }
+.Logo_Mercado {
+    width: 160px;
+    height: 65px;
+    object-fit: cover;
+    margin:5px 30px 0px 10px;
+}
 
-    .fa-solid.fa-location-dot{
-        font-size: 1.7em;
-        margin-top: 2px;
-    }
+div.container_input{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+}
 
-    div.endereco{
+.inputEbt{
+    display: flex;
+    align-items: center;
+}
+
+.fa-solid.fa-location-dot{
+    font-size: 1.7em;
+    margin-top: 2px;
+}
+
+div.endereco{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,26 +285,31 @@ div.endereco:hover{
     transition: 0.3s;
 }
 
-    input[type="text"] {
+input[type="text"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 73%;
 }
-    .produto img {
-        height: 200px;  /* aumenta um pouco o tamanho, mas sem exagero */
-        object-fit: contain; /* mantém proporção da imagem */
-    }
-    
-    .menu-lateral.ativo ~ main section.produtos {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        width: calc(100% - 160px); /* subtrai a largura do menu lateral */
-        transition: width 0.3s ease;
-    }
 
-    .menu-lateral:not(.ativo) ~ main section.produtos {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        width: 100%;
-        transition: width 0.3s ease;
-    }
+.produto img {
+    height: 200px;  /* aumenta um pouco o tamanho, mas sem exagero */
+    object-fit: contain; /* mantém proporção da imagem */
+}
+
+main {
+    margin-left: 150px;
+}
+    
+main section.produtos {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 88%;
+    transition: width 0.3s ease;
+}
+
+.menu-lateral ~ main section.produtos {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    width: 88%;
+    transition: width 0.3s ease;
+}
 }
